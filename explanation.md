@@ -10,19 +10,22 @@ These include:
 ## Main function of a browser
 The main function of a browser is to present the web resource you choose, by requesting it from the server and displaying it in the browser window. The resource is usually an HTML document, but may also be a PDF, image, or some other type of content. The location of the resource is specified by the user using a URI (Uniform Resource Identifier
 ## Common User interface elements of a Browser
-*Home button that takes you to your home page
-*Bookmarking Options
-*Back and Forward buttons
-*Address Bar for inserting URI
-*Refresh and Stop butoons for refreshing or stopping the loading of current pages/documents
+#### Home button that takes you to your home page
+#### Bookmarking Options
+#### Back and Forward buttons
+#### Address Bar for inserting URI
+#### Refresh and Stop butoons for refreshing or stopping the loading of current pages/documents
 
 # The browsers high level structure
 The browsers main components are :
 1.**The User Inteface :** This includes the address bar, back/forward button, bookmarking menu, etc. Every part of the browser display except the window where you see the requested page.
+
 2.**The Browser Engine :** It manages actions between the UI and the rendering engine.
+
 3.**The Rendering Engine:** This is responsible for displaying requested content content.For example if the requested content is HTML, the rendering engine parses HTML and CSS, and displays the parsed content on the screen.
+
 Different browsers use different rendering engines: Internet Explorer uses Trident, Firefox uses Gecko, Safari uses WebKit. Chrome and Opera (from version 15) use Blink, a fork of WebKit(an open source rendering engine which started as an engine for the Linux platform and was modified by Apple to support Mac and Windows).
-    ### The main Flow
+###The main Flow
     *The rendering engine will start getting the contents of the requested document from the networking layer. This will usually be done in 8kB chunks.The rendering engine will start parsing the HTML document and convert elements to [DOM](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#DOM) nodes in a tree called the "content tree". The engine will parse the style data, both in external CSS files and in style elements. Styling information together with visual instructions in the HTML will be used to create another tree: the render tree.
     
     The render tree contains rectangles with visual attributes like color and dimensions. The rectangles are in the right order to be displayed on the screen.
